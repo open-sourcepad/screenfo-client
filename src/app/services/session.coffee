@@ -8,6 +8,7 @@ module = ($resource,BASE_ENDPOINT,$http)->
       login:
         method: 'POST'
         url: "#{BASE_ENDPOINT}/auth/log_in"
+      
     }
 
 
@@ -18,7 +19,7 @@ module = ($resource,BASE_ENDPOINT,$http)->
 
   Session.setHeaders =(data)->
     $http.defaults.headers.common.AccessToken = localStorage.getItem('access_token') || null
-    $http.defaults.headers.common.UserId = localStorage.getItem('user_id') || null
+    # $http.defaults.headers.common.UserId = localStorage.getItem('user_id') || null
 
 
   Session

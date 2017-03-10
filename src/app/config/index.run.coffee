@@ -3,6 +3,7 @@ angular.module('client').run [
 
     $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
 
+      Session.setHeaders()
       if toState.unauthenticated
         if !!localStorage.getItem('access_token')
           event.preventDefault()

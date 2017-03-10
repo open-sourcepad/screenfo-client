@@ -32,23 +32,12 @@
 
             .integration-list
               .img-container-n24
-                img(src="/vendor/images/n24-logo.png")
+                a(ng-click="toggle('n24',true)")
+                  img(src="/vendor/images/n24-logo.png")
               .img-container-pivotal
                 img(src="/vendor/images/ptracker-logo.svg")
-                span (Soon)
               .img-container-slack
                 img(src="/vendor/images/slack-logo.png")
-                span (Soon)
               .img-container-skype
                 img(src="/vendor/images/skype-logo.png")
-                span (Soon)
-
-            .integration-form
-              form(name="integrationForm")
-                .form-horizontal
-                  .form-group
-                    input.form-control(ng-model="creds.email" placeholder="Email Address")
-                  .form-group
-                    input.form-control(type="password" ng-model="creds.password" placeholder="Password")
-                  .form-group
-                    a.btn.btn-default(ng-click="integrate()") Integrate Account
+integrate-modal(ng-show="modalShow" integration-type="type" show="modalShow" toggle="toggle(type,show)" submit="integrate(obj)")

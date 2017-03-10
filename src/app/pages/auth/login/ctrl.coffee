@@ -1,4 +1,4 @@
-Ctrl = ($scope,$state,growl,Session)->
+Ctrl = ($scope,$state,growl,Session,Auth)->
 
   $scope.creds =
     email: ""
@@ -13,6 +13,7 @@ Ctrl = ($scope,$state,growl,Session)->
     if form.$valid
       Session.login(user: $scope.creds).$promise
         .then (data) ->
+          Auth.setUser(data)
           Session.setSession(data)
           growl.success(MESSAGES.LOGIN_SUCCESS)
           $state.go("account.settings")

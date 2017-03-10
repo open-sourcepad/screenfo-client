@@ -1,0 +1,18 @@
+#openModal.modalDialog(ng-class="{'target': $ctrl.show}")
+  .integration-form
+    a.close(ng-click="$ctrl.toggle({type:'',show:false})")
+      i.fa.fa-times
+    .head-title
+      .img-container
+        img(ng-show="$ctrl.integrationType == 'n24'" src="/vendor/images/n24-logo.png")
+        img(ng-show="$ctrl.integrationType == 'pivotal'" src="/vendor/images/ptracker-logo.svg")
+        img(ng-show="$ctrl.integrationType == 'slack'" src="/vendor/images/slack-logo.png")
+        img(ng-show="$ctrl.integrationType == 'skype'" src="/vendor/images/skype-logo.png")  
+    form(name="integrationForm")
+      .form-horizontal
+        .form-group
+          input.form-control(ng-model="$ctrl.creds.email" placeholder="Email Address")
+        .form-group
+          input.form-control(type="password" ng-model="$ctrl.creds.password" placeholder="Password")
+        .form-group
+          a.btn.btn-default(ng-click="$ctrl.onSubmit(integrationForm)") Integrate Account
