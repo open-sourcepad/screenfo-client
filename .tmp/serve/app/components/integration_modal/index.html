@@ -1,0 +1,19 @@
+
+<div id="openModal" ng-class="{'target': $ctrl.show}" class="modalDialog">
+  <div class="integration-form"><a ng-click="$ctrl.toggle({type:'',show:false})" class="close"><i class="fa fa-times"></i></a>
+    <div class="head-title">
+      <div class="img-container"><img ng-show="$ctrl.integrationType == 'n24'" src="/vendor/images/n24-logo.png"><img ng-show="$ctrl.integrationType == 'pivotal'" src="/vendor/images/ptracker-logo.svg"><img ng-show="$ctrl.integrationType == 'slack'" src="/vendor/images/slack-logo.png"><img ng-show="$ctrl.integrationType == 'skype'" src="/vendor/images/skype-logo.png"></div>
+    </div>
+    <form name="integrationForm">
+      <div class="form-horizontal">
+        <div class="form-group">
+          <input ng-model="$ctrl.creds.username" placeholder="Email Address" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" ng-model="$ctrl.creds.password" placeholder="Password" class="form-control">
+        </div>
+        <div class="form-group"><a ng-click="$ctrl.onSubmit(integrationForm)" class="btn btn-default">Connect Account</a></div>
+      </div>
+    </form>
+  </div>
+</div>

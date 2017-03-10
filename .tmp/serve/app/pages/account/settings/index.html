@@ -1,0 +1,41 @@
+
+<div class="settings-container">
+  <div class="title-label"><span class="title-text">Account Settings</span></div>
+  <div class="row">
+    <div class="col-md-4 no-padding mtop-25">
+      <div class="account-info">
+        <div class="img-container"><img src="/vendor/images/logo.png"></div>
+        <div class="pull-right profile-edit"><span>Edit Profile</span></div>
+        <div class="user-info"><span ng-bind="user.email" class="email"></span></div>
+        <div class="user-info"><span class="email">Token: {{user.access_token}}</span></div>
+      </div>
+    </div>
+    <div class="col-md-8 no-padding">
+      <div class="row mtop-25">
+        <div class="col-md-12">
+          <div class="messaging-container">
+            <div class="title-label"><span class="title-text">Global Messaging</span></div>
+            <form name="messageForm" novalidate="true" autocomplete="off" class="messaging-form">
+              <textarea name="message" ng-model="message.content" placeholder="Write a message..." required class="form-control"></textarea>
+            </form>
+            <div class="pull-right">
+              <div class="btn-send"><a ng-click="send_message()" ng-disabled="messageForm.message.$error.required" class="btn btn-default">Send</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="integration-container">
+            <div class="title-label"><span class="title-text">Integrations</span></div>
+            <div class="integration-list">
+              <div class="img-container-n24"><a ng-click="toggle('n24',true)"><img src="/vendor/images/n24-logo.png"></a></div>
+              <div class="img-container-pivotal"><img src="/vendor/images/ptracker-logo.svg"></div>
+              <div class="img-container-slack"><img src="/vendor/images/slack-logo.png"></div>
+              <div class="img-container-skype"><img src="/vendor/images/skype-logo.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<integrate-modal ng-show="modalShow" integration-type="type" show="modalShow" toggle="toggle(type,show)" submit="integrate(obj)"></integrate-modal>
