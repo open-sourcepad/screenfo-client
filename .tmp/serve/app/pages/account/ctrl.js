@@ -1,0 +1,10 @@
+(function() {
+  var Ctrl;
+
+  Ctrl = function($scope, $state, growl) {};
+
+  angular.module('client').controller('AccountCtrl', Ctrl);
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFnZXMvYWNjb3VudC9jdHJsLmpzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlcyI6WyJwYWdlcy9hY2NvdW50L2N0cmwuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUEsTUFBQTs7RUFBQSxJQUFBLEdBQU8sU0FBQyxNQUFELEVBQVEsTUFBUixFQUFlLEtBQWYsR0FBQTs7RUFJUCxPQUFPLENBQUMsTUFBUixDQUFlLFFBQWYsQ0FBd0IsQ0FBQyxVQUF6QixDQUFvQyxhQUFwQyxFQUFtRCxJQUFuRDtBQUpBIiwic291cmNlc0NvbnRlbnQiOlsiQ3RybCA9ICgkc2NvcGUsJHN0YXRlLGdyb3dsKS0+XHJcblxyXG4gXHJcblxyXG5hbmd1bGFyLm1vZHVsZSgnY2xpZW50JykuY29udHJvbGxlcignQWNjb3VudEN0cmwnLCBDdHJsKVxyXG4iXX0=

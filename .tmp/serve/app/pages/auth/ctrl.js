@@ -1,0 +1,10 @@
+(function() {
+  var Ctrl;
+
+  Ctrl = function($scope, $state, growl) {};
+
+  angular.module('client').controller('AuthCtrl', Ctrl);
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFnZXMvYXV0aC9jdHJsLmpzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlcyI6WyJwYWdlcy9hdXRoL2N0cmwuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUEsTUFBQTs7RUFBQSxJQUFBLEdBQU8sU0FBQyxNQUFELEVBQVEsTUFBUixFQUFlLEtBQWYsR0FBQTs7RUFJUCxPQUFPLENBQUMsTUFBUixDQUFlLFFBQWYsQ0FBd0IsQ0FBQyxVQUF6QixDQUFvQyxVQUFwQyxFQUFnRCxJQUFoRDtBQUpBIiwic291cmNlc0NvbnRlbnQiOlsiQ3RybCA9ICgkc2NvcGUsJHN0YXRlLGdyb3dsKS0+XHJcblxyXG4gXHJcblxyXG5hbmd1bGFyLm1vZHVsZSgnY2xpZW50JykuY29udHJvbGxlcignQXV0aEN0cmwnLCBDdHJsKVxyXG4iXX0=
