@@ -1,3 +1,6 @@
 .header
   .header-container
     span.app-title ScreeNfo
+    .pull-right(ng-show="isLoggedIn()")
+      a.logout-link(ng-click="logout()")
+        span Logout

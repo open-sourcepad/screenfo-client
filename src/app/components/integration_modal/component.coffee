@@ -3,14 +3,14 @@ Ctrl = ->
 
   ctrl.$onInit = ->
     @.creds =
-      email: ''
+      username: ''
       password: ''
-      type: ''
+      third_party: ''
 
   ctrl.onSubmit =(form)->
     form.$submitted = true
     if form.$valid
-      @.creds.type = @.integrationType
+      @.creds.third_party = @.integrationType
       @.submit({obj: @.creds})
 
   return

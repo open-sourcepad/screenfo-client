@@ -6,7 +6,7 @@
     .img-container
       img(src="/vendor/images/logo.png")
 
-    form(name="registerForm")
+    form(name="registerForm" novalidate="true" autocomplete="off")
       .form-horizontal
         .form-group
           input.form-control(
@@ -28,7 +28,6 @@
           )
         .form-group
           a.btn.btn-block.btn-default(ng-click="register(registerForm)") Register
-
     
 
     .signup-link

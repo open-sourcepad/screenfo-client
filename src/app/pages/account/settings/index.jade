@@ -24,7 +24,7 @@
             .title-label
               span.title-text Global Messaging
 
-            form.messaging-form(name="messageForm")
+            form.messaging-form(name="messageForm" novalidate="true" autocomplete="off")
               textarea.form-control(name="message" ng-model="message.content" placeholder="Write a message..." required=true)
 
             .pull-right

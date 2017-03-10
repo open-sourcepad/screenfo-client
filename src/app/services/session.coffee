@@ -8,7 +8,9 @@ module = ($resource,BASE_ENDPOINT,$http)->
       login:
         method: 'POST'
         url: "#{BASE_ENDPOINT}/auth/log_in"
-      
+      logout:
+        method: 'DELETE'
+        url: "#{BASE_ENDPOINT}/auth/log_out"
     }
 
 

@@ -1,4 +1,4 @@
-Ctrl = ($scope,$state,growl,Session)->
+Ctrl = ($scope,$state,growl,Session,Auth)->
 
   $scope.user =
     email: ""
@@ -12,8 +12,10 @@ Ctrl = ($scope,$state,growl,Session)->
     if form.$valid
       Session.register({user: $scope.user}).$promise
         .then (data)->
+          Auth.setUser(data)
+          Session.setSession(data)
           growl.success(MESSAGES.REGISTER_SUCCESS)
-          $state.go("auth.login")
+          $state.go("account.settings")
         .catch (err)->
           growl.success(MESSAGES.REGISTER_FAILED)
 
