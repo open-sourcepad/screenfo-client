@@ -1,0 +1,32 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+      - ruby
+  coffeelint:
+    enabled: true
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+  - "src/**/*"
+exclude_paths:
+  - "vendor/**/*"
+  - "**.jpg"
+  - "**.jpeg"
+  - "**.png"
+  - "**.gif"
+  - "**.tif"
+  - "**.tiff"
+  - "**.woff"
+  - "**.woff2"
+  - "**.ttf"
+  - "**.eot"
+  - "**.svg"
+  - "**.ttc"

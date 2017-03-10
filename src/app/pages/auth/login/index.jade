@@ -1,0 +1,32 @@
+.box
+  .inner-container
+    .header-label
+      span Login
+
+    .img-container
+      img(src="/vendor/images/logo.png")
+
+    form(name="loginForm")
+      .form-horizontal
+        .form-group
+          input.form-control(
+            type="email"
+            name="email"
+            ng-model="creds.email"
+            placeholder="Email"
+            required=true
+            ng-enter="login(loginForm)"
+          )
+        .form-group
+          input.form-control(
+            type="password"
+            name="password"
+            ng-model="creds.password"
+            placeholder="Password"
+            required=true
+            ng-enter="login(loginForm)"
+          )
+        .form-group
+          a.btn.btn-block.btn-default(ng-show="!uiState.loading" ng-click="login(loginForm)") Login
+          spinner(ng-show="uiState.loading")
+    

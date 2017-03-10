@@ -1,0 +1,54 @@
+.settings-container
+
+  .title-label
+    span.title-text Account Settings
+
+  .row
+    .col-md-4.no-padding.mtop-25
+      .account-info
+        .img-container
+          img(src="/vendor/images/logo.png")
+
+        .pull-right.profile-edit
+          span Edit Profile
+    .col-md-8.no-padding
+      .row.mtop-25
+        .col-md-12
+          .messaging-container
+            .title-label
+              span.title-text Global Messaging
+
+            .messaging-form
+              textarea.form-control(ng-model="message" placeholder="Write a message...")
+
+            .pull-right
+              .btn-send
+                a.btn.btn-default Send
+        
+        .col-md-12
+          .integration-container
+            .title-label
+              span.title-text Integrations
+
+            .integration-list
+              .img-container-n24
+                img(src="/vendor/images/n24-logo.png")
+              .img-container-pivotal
+                img(src="/vendor/images/ptracker-logo.svg")
+                span (Soon)
+              .img-container-slack
+                img(src="/vendor/images/slack-logo.png")
+                span (Soon)
+              .img-container-skype
+                img(src="/vendor/images/skype-logo.png")
+                span (Soon)
+
+            .integration-form
+              form(name="integrationForm")
+                .form-horizontal
+                  .form-group
+                    input.form-control(ng-model="creds.email" placeholder="Email Address")
+                  .form-group
+                    input.form-control(type="password" ng-model="creds.password" placeholder="Password")
+                  .form-group
+                    a.btn.btn-default(ng-click="integrate()") Integrate Account
