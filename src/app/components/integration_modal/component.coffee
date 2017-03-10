@@ -15,7 +15,7 @@ Ctrl = ->
 
   return
 angular.module('client').component 'integrateModal',
-  templateUrl: "/app/components/integration_modal/index.html"
+  templateUrl: "app/components/integration_modal/index.html"
   controller: Ctrl
   bindings:
     integrationType: "="
