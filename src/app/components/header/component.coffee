@@ -4,13 +4,16 @@ Ctrl =($scope,$state,Session,growl,Auth)->
     return !!localStorage.getItem('access_token')
 
   $scope.logout = ->
-    Session.logout().$promise
-      .then (data)->
-        Auth.removeUser()
-        growl.success(MESSAGES.LOGOUT_SUCCESS)
-        $state.go("auth.register")
-      .catch (err)->
-        growl.error("Failed to logout.")
+    Auth.removeUser()
+    growl.success(MESSAGES.LOGOUT_SUCCESS)
+    $state.go("auth.register")
+    # Session.logout().$promise
+    #   .then (data)->
+    #     Auth.removeUser()
+    #     growl.success(MESSAGES.LOGOUT_SUCCESS)
+    #     $state.go("auth.register")
+    #   .catch (err)->
+    #     growl.error("Failed to logout.")
 
 
 angular.module('client').directive 'header',->
