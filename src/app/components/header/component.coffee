@@ -1,4 +1,4 @@
-Ctrl =($scope,Session,growl,Auth)->
+Ctrl =($scope,$state,Session,growl,Auth)->
 
   $scope.isLoggedIn = ->
     return !!localStorage.getItem('access_token')

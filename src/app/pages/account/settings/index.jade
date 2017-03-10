@@ -36,14 +36,28 @@
             .title-label
               span.title-text Integrations
 
-            .integration-list
-              .img-container-n24
-                a(ng-click="toggle('n24',true)")
-                  img(src="/vendor/images/n24-logo.png")
-              .img-container-pivotal
-                img(src="/vendor/images/ptracker-logo.svg")
-              .img-container-slack
-                img(src="/vendor/images/slack-logo.png")
-              .img-container-skype
-                img(src="/vendor/images/skype-logo.png")
+            .col-md-3.integration-list
+              .row
+                img.img-container-n24(src="/vendor/images/n24-logo.png")
+              .row
+                img.img-container-pivotal(src="/vendor/images/ptracker-logo.svg")
+              .row
+                img.img-container-slack(src="/vendor/images/slack-logo.png")
+              .row
+                img.img-container-skype(src="/vendor/images/skype-logo.png")
+
+            .col-md-3
+              .row
+                .img-text
+                  a(ng-click="toggle('n24',true)" ng-show="!user.n24_integrated") Connect
+                  span(ng-show="user.n24_integrated") Connected
+              .row
+                .img-text
+                  span (Soon)
+              .row
+                .img-text
+                  span (Soon)
+              .row
+                .img-text
+                  span (Soon)
 integrate-modal(ng-show="modalShow" integration-type="type" show="modalShow" toggle="toggle(type,show)" submit="integrate(obj)")
