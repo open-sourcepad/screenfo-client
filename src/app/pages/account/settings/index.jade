@@ -11,6 +11,12 @@
 
         .pull-right.profile-edit
           span Edit Profile
+
+        .user-info
+          span.email(ng-bind="user.email")
+        .user-info
+          span.email Token: {{user.access_token}}
+
     .col-md-8.no-padding
       .row.mtop-25
         .col-md-12
@@ -18,12 +24,12 @@
             .title-label
               span.title-text Global Messaging
 
-            .messaging-form
-              textarea.form-control(ng-model="message" placeholder="Write a message...")
+            form.messaging-form(name="messageForm")
+              textarea.form-control(name="message" ng-model="message.content" placeholder="Write a message..." required=true)
 
             .pull-right
               .btn-send
-                a.btn.btn-default Send
+                a.btn.btn-default(ng-click="send_message()" ng-disabled="messageForm.message.$error.required") Send
         
         .col-md-12
           .integration-container

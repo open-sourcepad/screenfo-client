@@ -4,6 +4,9 @@ module = ($resource,BASE_ENDPOINT,$http)->
     {
       integrate:
         method: 'POST'
+      send:
+        method: 'POST'
+        url: "#{BASE_ENDPOINT}/messages"
     }
 
   User
